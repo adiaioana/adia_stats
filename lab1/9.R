@@ -1,8 +1,11 @@
-n=5
-set.seed(0) #make this example reproducible
+noua=function(n,k){
+  
+set.seed(0)
 vec=vector(length=n)
 for(i in 1:n) {
-  vec[i]=dgeom(i,prob=0.2)
+  vec[i]=dgeom(i,prob=k)
 }
 #plot (k, vec, type = "l", ylab = "log density")
 barplot(vec)
+}
+noua(18,0.2)
